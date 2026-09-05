@@ -18,6 +18,7 @@
     "country_results_count": "{{ count }} results",
     "product_details": "Product details",
     "show_product_details": "Show product details for {{ product_name }}",
+    "show_submenu": "Show {{ title }} submenu",
     "decrease_quantity": "Decrease quantity",
     "discount": "Apply a discount code",
     "discount_menu": "Discount Codes",
@@ -61,6 +62,7 @@
     "slideshow_previous": "Previous slide",
     "unit_price": "Unit price",
     "find_country": "Find country",
+    "view_disclosure_information_for_product": "View disclosure information for {{ product_title }}",
     "view_pricing_info": "View pricing information",
     "price_filter_low": "Low price",
     "price_filter_high": "High price"
@@ -75,6 +77,7 @@
     "apply": "Apply",
     "back": "Back",
     "back_to": "Back to {{ title }}",
+    "back_to_main_menu": "Back to main menu",
     "choose": "Choose",
     // Button to reset current selection or input
     "clear": "Clear",
@@ -115,18 +118,18 @@
     "reset": "Reset",
     "enter_using_password": "Enter using password",
     "sign_up": "Sign up",
-    "submit": "Trimite",
+    "submit": "Submit",
     "view_store_information": "View store information",
     "sort": "Sort"
   },
   "blocks": {
     "contact_form": {
-      "name": "Nume",
-      "email": "Adresă de e-mail",
-      "phone": "Telefon",
-      "comment": "Povestește-ne despre proiectul tău",
-      "post_success": "Îți mulțumim că ne-ai contactat. Vom reveni cât mai curând posibil.",
-      "error_heading": "Ajustează următoarele:"
+      "name": "Name",
+      "email": "Email",
+      "phone": "Phone",
+      "comment": "Comment",
+      "post_success": "Thanks for contacting us. We'll get back to you as soon as possible.",
+      "error_heading": "Please adjust the following:"
     },
     "email_signup": {
       "label": "Email",
@@ -233,6 +236,7 @@
     "price_filter_html": "The highest price is {{ price }}",
     "product_image": "Product image",
     "product_information": "Product information",
+    "product_disclosures": "Product disclosures",
     "product_subtotal": "Product subtotal",
     "product_total": "Product total",
     "product_badge_sold_out": "Sold out",

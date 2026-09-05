@@ -1,5 +1,3 @@
-
-
 {% liquid
   assign block_settings = block.settings
   assign image = settings.logo
@@ -135,6 +133,12 @@
         }
       ],
       "default": "heading",
+      "visible_if": "{{ settings.logo == blank and settings.logo_inverse == blank or block.settings.inverse == false }}"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "t:settings.color",
       "visible_if": "{{ settings.logo == blank and settings.logo_inverse == blank or block.settings.inverse == false }}"
     },
     {
