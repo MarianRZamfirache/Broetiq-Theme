@@ -358,8 +358,8 @@
     data-header-rows="single"
   {% endif %}
   style="
-    --color-background-top-row: rgba({{ section.settings.background_color_top.rgba | default: settings.page_background_color.rgba }});
-    --color-background-bottom-row: rgba({{ section.settings.background_color_bottom.rgba | default: settings.page_background_color.rgba }});
+    --color-background-top-row: {% if section.settings.background_color_top != blank %}rgba({{ section.settings.background_color_top.rgba }}){% else %}var(--color-background){% endif %};
+    --color-background-bottom-row: {% if section.settings.background_color_bottom != blank %}rgba({{ section.settings.background_color_bottom.rgba }}){% else %}var(--color-background){% endif %};
     {% if transparent and text_color_transparent != blank %}
       --color-transparent-text: {{ text_color_transparent }};
       --color-transparent-text-rgb: {{ text_color_transparent.rgb }};

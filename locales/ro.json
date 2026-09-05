@@ -47,6 +47,7 @@
     "cart": "Coș",
     "cart_count": "Total articole în coș",
     "menu": "Meniu",
+    "toggle_dark_mode": "Comută modul întunecat",
     "country_region": "Țară/regiune",
     "slide_status": "Diapozitivul {{ index }} din {{ length }}",
     "scroll_to": "Derulează la {{ title }}",

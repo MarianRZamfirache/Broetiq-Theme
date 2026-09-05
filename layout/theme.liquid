@@ -6,6 +6,8 @@
   lang="{{ request.locale.iso_code }}"
 >
   <head>
+    {%- render 'color-mode-init' -%}
+
     {%- if settings.favicon != blank -%}
       <link
         rel="icon"

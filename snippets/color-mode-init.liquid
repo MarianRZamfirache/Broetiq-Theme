@@ -1,0 +1,26 @@
+{% doc %}
+  Sets data-color-mode on <html> before first paint, so palette-vars.liquid's
+  html[data-color-mode='dark'] overrides apply without a flash of the wrong mode.
+  Reads a stored preference first, falls back to the OS preference. Must stay a plain,
+  synchronous inline script (no type="module", no defer) so it blocks rendering until it runs -
+  rendered as the very first thing in <head>, before any CSS.
+{% enddoc %}
+
+{% if settings.enable_dark_mode %}
+  <script>
+    (function () {
+      var mode = 'light';
+      try {
+        var stored = window.localStorage.getItem('broetiq:color-mode');
+        if (stored === 'light' || stored === 'dark') {
+          mode = stored;
+        } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+          mode = 'dark';
+        }
+      } catch (error) {
+        // localStorage/matchMedia unavailable (e.g. blocked storage) - fall back to light.
+      }
+      document.documentElement.dataset.colorMode = mode;
+    })();
+  </script>
+{% endif %}

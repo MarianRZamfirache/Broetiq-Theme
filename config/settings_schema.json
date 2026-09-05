@@ -66,6 +66,24 @@
           "background": "#ffffff",
           "foreground": "#000000"
         }
+      },
+      {
+        "type": "header",
+        "content": "t:content.dark_mode"
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_dark_mode",
+        "label": "t:settings.enable_dark_mode",
+        "info": "t:info.enable_dark_mode",
+        "default": false
+      },
+      {
+        "type": "color",
+        "id": "dark_accent_color",
+        "label": "t:settings.dark_accent_color",
+        "default": "#f26430",
+        "visible_if": "{{ settings.enable_dark_mode }}"
       }
     ]
   },
@@ -86,6 +104,13 @@
       {
         "type": "paragraph",
         "content": "t:content.page_text_color_contrast_info"
+      },
+      {
+        "type": "color",
+        "id": "dark_page_text_color",
+        "label": "t:settings.page_text_color",
+        "default": "#f5efe8",
+        "visible_if": "{{ settings.enable_dark_mode }}"
       },
       {
         "type": "header",
@@ -1107,6 +1132,13 @@
         "default": "{{ settings.color_palette.background }}"
       },
       {
+        "type": "color",
+        "id": "dark_page_background_color",
+        "label": "t:settings.page_background_color",
+        "default": "#1a1512",
+        "visible_if": "{{ settings.enable_dark_mode }}"
+      },
+      {
         "type": "select",
         "id": "page_width",
         "label": "t:settings.page_width",
@@ -1238,6 +1270,38 @@
       },
       {
         "type": "header",
+        "content": "t:content.dark_mode",
+        "visible_if": "{{ settings.enable_dark_mode }}"
+      },
+      {
+        "type": "color",
+        "id": "dark_badge_sale_background_color",
+        "label": "t:settings.badge_sale_background_color",
+        "default": "#f26430",
+        "visible_if": "{{ settings.enable_dark_mode }}"
+      },
+      {
+        "type": "color",
+        "id": "dark_badge_sale_text_color",
+        "label": "t:settings.badge_sale_text_color",
+        "visible_if": "{{ settings.enable_dark_mode }}"
+      },
+      {
+        "type": "color",
+        "id": "dark_badge_sold_out_background_color",
+        "label": "t:settings.badge_sold_out_background_color",
+        "default": "#1a1512",
+        "visible_if": "{{ settings.enable_dark_mode }}"
+      },
+      {
+        "type": "color",
+        "id": "dark_badge_sold_out_text_color",
+        "label": "t:settings.badge_sold_out_text_color",
+        "default": "#f5efe8",
+        "visible_if": "{{ settings.enable_dark_mode }}"
+      },
+      {
+        "type": "header",
         "content": "t:names.typography"
       },
       {
@@ -1309,6 +1373,35 @@
         "label": "t:settings.borders",
         "default": "{{ settings.color_palette.background }}",
         "alpha": true
+      },
+      {
+        "type": "header",
+        "content": "t:content.dark_mode",
+        "visible_if": "{{ settings.enable_dark_mode }}"
+      },
+      {
+        "type": "color",
+        "id": "dark_palette_primary_button_background",
+        "label": "t:settings.background",
+        "default": "#f26430",
+        "alpha": true,
+        "visible_if": "{{ settings.enable_dark_mode }}"
+      },
+      {
+        "type": "color",
+        "id": "dark_palette_primary_button_text",
+        "label": "t:settings.text",
+        "default": "#1a1512",
+        "alpha": true,
+        "visible_if": "{{ settings.enable_dark_mode }}"
+      },
+      {
+        "type": "color",
+        "id": "dark_palette_primary_button_border",
+        "label": "t:settings.borders",
+        "default": "#1a1512",
+        "alpha": true,
+        "visible_if": "{{ settings.enable_dark_mode }}"
       },
       {
         "type": "range",
@@ -1386,6 +1479,35 @@
         "label": "t:settings.borders",
         "default": "{{ settings.color_palette.foreground }}",
         "alpha": true
+      },
+      {
+        "type": "header",
+        "content": "t:content.dark_mode",
+        "visible_if": "{{ settings.enable_dark_mode }}"
+      },
+      {
+        "type": "color",
+        "id": "dark_palette_secondary_button_background",
+        "label": "t:settings.background",
+        "default": "#1a1512",
+        "alpha": true,
+        "visible_if": "{{ settings.enable_dark_mode }}"
+      },
+      {
+        "type": "color",
+        "id": "dark_palette_secondary_button_text",
+        "label": "t:settings.text",
+        "default": "#f5efe8",
+        "alpha": true,
+        "visible_if": "{{ settings.enable_dark_mode }}"
+      },
+      {
+        "type": "color",
+        "id": "dark_palette_secondary_button_border",
+        "label": "t:settings.borders",
+        "default": "#f5efe8",
+        "alpha": true,
+        "visible_if": "{{ settings.enable_dark_mode }}"
       },
       {
         "type": "range",
@@ -1642,6 +1764,33 @@
         "label": "t:settings.border_color",
         "default": "{{ settings.color_palette.foreground }}",
         "alpha": true
+      },
+      {
+        "type": "header",
+        "content": "t:content.dark_mode",
+        "visible_if": "{{ settings.enable_dark_mode }}"
+      },
+      {
+        "type": "color",
+        "id": "dark_drawer_background_color",
+        "label": "t:settings.background_color",
+        "default": "#1a1512",
+        "visible_if": "{{ settings.enable_dark_mode }}"
+      },
+      {
+        "type": "color",
+        "id": "dark_drawer_text_color",
+        "label": "t:settings.text_color",
+        "default": "#f5efe8",
+        "visible_if": "{{ settings.enable_dark_mode }}"
+      },
+      {
+        "type": "color",
+        "id": "dark_drawer_border_color",
+        "label": "t:settings.border_color",
+        "default": "#f5efe8",
+        "alpha": true,
+        "visible_if": "{{ settings.enable_dark_mode }}"
       }
     ]
   },
@@ -1690,6 +1839,32 @@
         "id": "palette_input_border",
         "label": "t:settings.borders",
         "default": "{{ settings.color_palette.foreground }}"
+      },
+      {
+        "type": "header",
+        "content": "t:content.dark_mode",
+        "visible_if": "{{ settings.enable_dark_mode }}"
+      },
+      {
+        "type": "color",
+        "id": "dark_palette_input_background",
+        "label": "t:settings.background",
+        "default": "#1a1512",
+        "visible_if": "{{ settings.enable_dark_mode }}"
+      },
+      {
+        "type": "color",
+        "id": "dark_palette_input_text",
+        "label": "t:settings.text",
+        "default": "#f5efe8",
+        "visible_if": "{{ settings.enable_dark_mode }}"
+      },
+      {
+        "type": "color",
+        "id": "dark_palette_input_border",
+        "label": "t:settings.borders",
+        "default": "#f5efe8",
+        "visible_if": "{{ settings.enable_dark_mode }}"
       },
       {
         "type": "range",
@@ -1808,6 +1983,41 @@
         "default": "{{ settings.color_palette.foreground }}",
         "alpha": true,
         "visible_if": "{{ settings.popover_drop_shadow == true }}"
+      },
+      {
+        "type": "header",
+        "content": "t:content.dark_mode",
+        "visible_if": "{{ settings.enable_dark_mode }}"
+      },
+      {
+        "type": "color",
+        "id": "dark_popover_background_color",
+        "label": "t:settings.background_color",
+        "default": "#1a1512",
+        "visible_if": "{{ settings.enable_dark_mode }}"
+      },
+      {
+        "type": "color",
+        "id": "dark_popover_text_color",
+        "label": "t:settings.text_color",
+        "default": "#f5efe8",
+        "visible_if": "{{ settings.enable_dark_mode }}"
+      },
+      {
+        "type": "color",
+        "id": "dark_popover_border_color",
+        "label": "t:settings.border_color",
+        "default": "#f5efe8",
+        "alpha": true,
+        "visible_if": "{{ settings.enable_dark_mode }}"
+      },
+      {
+        "type": "color",
+        "id": "dark_popover_shadow_color",
+        "label": "t:settings.shadow_color",
+        "default": "#f5efe8",
+        "alpha": true,
+        "visible_if": "{{ settings.enable_dark_mode and settings.popover_drop_shadow }}"
       }
     ]
   },
@@ -2052,6 +2262,35 @@
       },
       {
         "type": "header",
+        "content": "t:content.dark_mode",
+        "visible_if": "{{ settings.enable_dark_mode }}"
+      },
+      {
+        "type": "color",
+        "id": "dark_palette_variant_background",
+        "label": "t:settings.background",
+        "default": "#1a1512",
+        "alpha": true,
+        "visible_if": "{{ settings.enable_dark_mode }}"
+      },
+      {
+        "type": "color",
+        "id": "dark_palette_variant_text",
+        "label": "t:settings.text",
+        "default": "#f5efe8",
+        "alpha": true,
+        "visible_if": "{{ settings.enable_dark_mode }}"
+      },
+      {
+        "type": "color",
+        "id": "dark_palette_variant_border",
+        "label": "t:settings.borders",
+        "default": "#f5efe8",
+        "alpha": true,
+        "visible_if": "{{ settings.enable_dark_mode }}"
+      },
+      {
+        "type": "header",
         "content": "t:names.selected_variants"
       },
       {
@@ -2074,6 +2313,35 @@
         "label": "t:settings.borders",
         "default": "{{ settings.color_palette.foreground }}",
         "alpha": true
+      },
+      {
+        "type": "header",
+        "content": "t:content.dark_mode",
+        "visible_if": "{{ settings.enable_dark_mode }}"
+      },
+      {
+        "type": "color",
+        "id": "dark_palette_selected_variant_background",
+        "label": "t:settings.background",
+        "default": "#f5efe8",
+        "alpha": true,
+        "visible_if": "{{ settings.enable_dark_mode }}"
+      },
+      {
+        "type": "color",
+        "id": "dark_palette_selected_variant_text",
+        "label": "t:settings.text",
+        "default": "#1a1512",
+        "alpha": true,
+        "visible_if": "{{ settings.enable_dark_mode }}"
+      },
+      {
+        "type": "color",
+        "id": "dark_palette_selected_variant_border",
+        "label": "t:settings.borders",
+        "default": "#f5efe8",
+        "alpha": true,
+        "visible_if": "{{ settings.enable_dark_mode }}"
       },
       {
         "type": "header",

@@ -137,6 +137,31 @@
     </a>
   {% endif %}
 
+  {% if settings.enable_dark_mode %}
+    <script
+      type="module"
+      src="{{ 'theme-toggle.js' | asset_url }}"
+      fetchpriority="low"
+    ></script>
+
+    <theme-toggle class="header-actions__action theme-toggle">
+      <button
+        type="button"
+        class="button-unstyled theme-toggle__button{% if display_style == 'text' %} header-actions__text-style{% endif %}"
+        on:click="/toggle"
+        aria-pressed="false"
+        aria-label="{{ 'accessibility.toggle_dark_mode' | t }}"
+      >
+        <span class="svg-wrapper theme-toggle__icon theme-toggle__icon--sun" aria-hidden="true">
+          {{ 'icon-sun.svg' | inline_asset_content }}
+        </span>
+        <span class="svg-wrapper theme-toggle__icon theme-toggle__icon--moon" aria-hidden="true">
+          {{ 'icon-moon.svg' | inline_asset_content }}
+        </span>
+      </button>
+    </theme-toggle>
+  {% endif %}
+
   <span
     ref="liveRegion"
     class="visually-hidden"
@@ -329,5 +354,22 @@
     .header__column--right .header-actions--text {
       margin-inline-start: 0;
     }
+  }
+
+  .theme-toggle__button {
+    display: flex;
+    align-items: center;
+  }
+
+  .theme-toggle__icon--moon {
+    display: none;
+  }
+
+  html[data-color-mode='dark'] .theme-toggle__icon--sun {
+    display: none;
+  }
+
+  html[data-color-mode='dark'] .theme-toggle__icon--moon {
+    display: block;
   }
 {% endstylesheet %}
